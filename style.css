@@ -1,3 +1,11 @@
+:root{
+    --highlight-color: #D9B879;
+    --primary-color: #123D35;
+    --secondary-color: #789B91;
+    --text-color: #26312E;
+    --background-color: #F7F3EA;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -5,7 +13,11 @@
     }
 
 body{
-    background-color: rgb(255, 223, 163);
+    margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
 
 main{
@@ -15,13 +27,13 @@ main{
 }
 
 .header{
-    background-color: rgba(255, 102, 0, 0.651);
+    background-color: var(--primary-color);
     text-align: left;
     display: flex;
     justify-content: space-between;
     font-size: 2.5rem;
     padding: 0.8rem;
-    color: rgb(255, 223, 163);
+    color: var(--highlight-color);
     font-weight: bold;
 }
 
@@ -40,29 +52,47 @@ main{
 .one{
 
     font-size: 1.2rem;
-    background-color: rgb(189, 180, 240);
-    color: rgb(68, 66, 66);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     padding: 0.5rem;
     text-decoration: none;
     border-radius: 8px;
 }
 
 .one:hover{
-    background-color: rgb(255, 102, 0);
-    color: rgb(255, 223, 163);
+    background-color: var(--primary-color);
+    color: var(--highlight-color);
+    transition: background-color 0.2s ease;
 }
+
+.intro,
+.services,
+.about,
+.footer {
+  padding: 40px 5%;
+}
+
+.intro_text {
+  max-width: 700px;
+}
+
+.intro h1 {
+  margin-bottom: 16px;
+  font-size: 2.5rem;
+}
+
 
 .intro_text{
     font-size: 1.2rem;
     padding: 1rem;
     text-align: left;
-    color: rgb(68, 66, 66);
+    color: var(--text-color);
 }
 
 .btn {
     font-size: 1.2rem;
-    background-color: rgb(189, 180, 240);
-    color: rgb(68, 66, 66);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     padding: 0.2rem;
     font-weight: bold;
     text-decoration: none;
@@ -73,7 +103,7 @@ main{
     font-size: 1.2rem;
     padding: 1rem;
     text-align: left;
-    color: rgb(68, 66, 66);
+    color: var(--text-color);
 }
 
 .lazer {
