@@ -72,21 +72,24 @@ main{
   padding: 40px 5%;
 }
 
+.intro {
+  background-image: url('imagem_intro.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 400px;
+}
 .intro_text {
   max-width: 700px;
+  font-size: 1.2rem;
+    padding: 1rem;
+    text-align: left;
+    color: var(--highlight-color);
 }
 
 .intro h1 {
   margin-bottom: 16px;
   font-size: 2.5rem;
-}
-
-
-.intro_text{
-    font-size: 1.2rem;
-    padding: 1rem;
-    text-align: left;
-    color: var(--text-color);
 }
 
 .btn {
@@ -100,7 +103,25 @@ main{
 }
 
 .services {
-    font-size: 1.2rem;
+    display: flex;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    justify-content: space-between;
+    padding: 0;
+    overflow: hidden;
+}
+.services img {
+    display: block;
+    width: 50%;
+    max-width: none;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
+.services_text {
+    max-width: 700px;
+  font-size: 1.2rem;
     padding: 1rem;
     text-align: left;
     color: var(--text-color);
