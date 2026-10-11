@@ -115,7 +115,7 @@ main{
 .services_text {
     max-width: 50%;
   font-size: 1.2rem;
-    padding: 1rem;
+    padding: 3rem;
     text-align: left;
     color: var(--text-color);
 }
@@ -129,15 +129,40 @@ main{
 }
 
 .lazer {
+    min-height: 500px;
+    display: flex;
+    background-color: var(--primary-color);
     font-size: 1.2rem;
-    padding: 1rem;
+    padding: 0rem;
     text-align: left;
-    color: rgb(68, 66, 66);
+    color: var(--highlight-color);
 }
 
 .lazer_text{
+    max-width: 50%;
     font-size: 1.2rem;
-    padding: 1rem;
+    padding: 3rem;
     text-align: left;
-    color: rgb(68, 66, 66);
+    color: var(--highlight-color);
+}
+
+.lazer::after {
+    content: "";
+   flex: 1;
+   background-image: url('lazer.png');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+.footer {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  text-align: left;
+  padding: 20px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
 }
