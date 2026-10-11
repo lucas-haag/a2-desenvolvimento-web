@@ -80,7 +80,7 @@ main{
     min-height: 400px;
 }
 .intro_text {
-  max-width: 700px;
+  max-width: 50%;
   font-size: 1.2rem;
     padding: 1rem;
     text-align: left;
@@ -103,28 +103,29 @@ main{
 }
 
 .services {
+    min-height: 500px;
     display: flex;
+    flex-direction: row-reverse;
     background-color: var(--secondary-color);
     color: var(--text-color);
-    justify-content: space-between;
     padding: 0;
     overflow: hidden;
 }
-.services img {
-    display: block;
-    width: 50%;
-    max-width: none;
-    height: 100%;
-    object-fit: cover;
-    margin: 0;
-    padding: 0;
-}
+
 .services_text {
-    max-width: 700px;
+    max-width: 50%;
   font-size: 1.2rem;
     padding: 1rem;
     text-align: left;
     color: var(--text-color);
+}
+.services::after {
+    content: "";
+   flex: 1;
+   background-image: url('quarto.png');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
 }
 
 .lazer {
