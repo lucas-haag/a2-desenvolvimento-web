@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solarium Resort</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+      <div class="header_logo">Solarium Resort</div>
+
+      <nav class="menu">
+        <a class="one" href="index.html">Home</a>
+        <a class="one" href="servicos.html">Serviços</a>
+        <a class="one" href="reservas.html">Reserve</a>
+        <a class="one" href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="reservas">
+            <h1>Faça sua reserva no Solarium Resort</h1>
+            <p>Preencha o formulário abaixo para garantir sua estadia conosco. Estamos ansiosos para recebê-lo!</p>
+
+            <form action="#" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="data_entrada">Data de Entrada:</label>
+                <input type="date" id="data_entrada" name="data_entrada" required>
+
+                <label for="data_saida">Data de Saída:</label>
+                <input type="date" id="data_saida" name="data_saida" required>
+
+                <label for="quartos">Número de Quartos:</label>
+                <input type="number" id="quartos" name="quartos" min="1" required>
+
+                <button type="submit">Enviar Reserva</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        &copy; 2024 Solarium Resort. Todos os direitos reservados.
+    </footer>
+</body>
+</html>
