@@ -1,80 +1,110 @@
+
+/* Importação das fontes utilizadas no site */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Cores e fontes padronizadas do projeto */
 :root{
     --highlight-color: #D9B879;
     --primary-color: #123D35;
     --secondary-color: #789B91;
     --text-color: #26312E;
     --background-color: #F7F3EA;
+    --font-title: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
 }
 
+/* Remove margens e espaçamentos padrão do navegador */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     }
 
-body{
+/* Define a aparência geral corpo do site */
+body {
     min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-    margin: 0;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-main{
+main {
     flex: 1;
-    text-align: left;
-    font-size: 1.2rem;;
 }
 
-.header{
+/* Organiza a marca e os links do menu */
+.header {
     background-color: var(--primary-color);
-    text-align: left;
     display: flex;
     justify-content: space-between;
-    font-size: 2.5rem;
-    padding: 0.8rem;
+    align-items: center;
+    gap: 12px;
+    padding: 0.8rem 5%;
     color: var(--highlight-color);
-    font-weight: bold;
 }
 
-.header_logo{
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
+.header_logo {
+    font-family: var(--font-title);
     font-size: 2.5rem;
+    font-weight: 700;
 }
 
+/* links do menu com espaçamento */
 .menu {
-   display: flex;
-   gap: 12px;;
-   
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.one{
+/* Estilos compartilhados entre os botões */
+.one, .btn {
+    display: inline-block;
+    padding: 10px 16px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.2s ease;
+}
 
-    font-size: 1.2rem;
+/* Botões do menu */
+.one {
     background-color: var(--secondary-color);
     color: var(--text-color);
-    padding: 0.5rem;
-    text-decoration: none;
-    border-radius: 8px;
 }
 
-.one:hover{
+.one:hover {
     background-color: var(--primary-color);
     color: var(--highlight-color);
-    transition: background-color 0.2s ease;
 }
 
+/* Botão principal da seção de introdução */
+.btn {
+    margin-top: 5px;
+    padding: 12px 22px;
+    background-color: var(--highlight-color);
+    color: var(--primary-color);
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: var(--highlight-color);
+}
+
+/* Espaçamento padrão das seções informativas */
 .intro,
 .services,
 .about,
 .footer {
-  padding: 40px 5%;
+  padding: 40px 0%;
 }
 
+/* apresentação do resort */
 .intro {
   background-image: url('img/imagem_intro.png');
     background-size: cover;
@@ -83,28 +113,22 @@ main{
     min-height: 400px;
 }
 .intro_text {
-  max-width: 50%;
-  font-size: 1.2rem;
-    padding: 1rem;
-    text-align: left;
+    max-width: 50%;
+    padding: 3rem;
     color: var(--highlight-color);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    text-align: justify;
 }
 
 .intro h1 {
-  margin-bottom: 16px;
-  font-size: 2.5rem;
+    margin-bottom: 16px;
+    font-family: var(--font-title);
+    font-size: 2rem;
+    text-align: left;
 }
 
-.btn {
-    font-size: 1.2rem;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    padding: 0.2rem;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 6px;
-}
-
+/* serviços */
 .services {
     min-height: 500px;
     display: flex;
@@ -117,11 +141,20 @@ main{
 
 .services_text {
     max-width: 50%;
-  font-size: 1.2rem;
+    font-size: 1rem;
     padding: 3rem;
-    text-align: left;
+    text-align: justify;
     color: var(--text-color);
 }
+
+.services_text h1,
+.services_text h2 {
+    margin-bottom: 16px;
+    font-family: var(--font-title);
+    font-size: 2rem;
+    text-align: left;
+}
+/* Imagem do quarto */
 .services::after {
     content: "";
    flex: 1;
@@ -131,6 +164,7 @@ main{
    background-repeat: no-repeat;
 }
 
+/* seção de lazer */
 .lazer {
     min-height: 500px;
     display: flex;
@@ -141,14 +175,23 @@ main{
     color: var(--highlight-color);
 }
 
-.lazer_text{
+.lazer_text {
     max-width: 50%;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 3rem;
-    text-align: left;
+    text-align: justify;
     color: var(--highlight-color);
 }
 
+.lazer_text h1,
+.lazer_text h2 {
+    margin-bottom: 16px;
+    font-family: var(--font-title);
+    font-size: 2rem;
+    text-align: left;
+}
+
+/* Imagem de lazer posicionada */
 .lazer::after {
     content: "";
    flex: 1;
@@ -158,6 +201,9 @@ main{
    background-repeat: no-repeat;
 }
 
+/* ========================================
+   8. SEÇÃO DE RESERVAS
+   ======================================== */
 .reservas {
   padding: 40px 5%;
   background-color: var(--background-color);
@@ -176,6 +222,7 @@ main{
   text-align: center;
 }
 
+/* Organiza os campos do formulário */
 .reservas form {
   display: flex;
   flex-direction: column;
