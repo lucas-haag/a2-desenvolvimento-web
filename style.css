@@ -201,9 +201,7 @@ main {
    background-repeat: no-repeat;
 }
 
-/* ========================================
-   8. SEÇÃO DE RESERVAS
-   ======================================== */
+/* seção de reservas */
 .reservas {
   padding: 40px 5%;
   background-color: var(--background-color);
@@ -222,7 +220,7 @@ main {
   text-align: center;
 }
 
-/* Organiza os campos do formulário */
+/* formulário de reservas */
 .reservas form {
   display: flex;
   flex-direction: column;
@@ -254,6 +252,7 @@ main {
   cursor: pointer;
 }
 
+/* rodapé */
 .footer {
   background-color: var(--secondary-color);
   color: var(--text-color);
@@ -266,6 +265,7 @@ main {
   font-size: 0.9rem;
 }
 
+/* padronização responsividade */
 @media (max-width: 700px) {
   .header {
     flex-direction: column;
