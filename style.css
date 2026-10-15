@@ -7,6 +7,7 @@
     --highlight-color: #D9B879;
     --primary-color: #123D35;
     --secondary-color: #789B91;
+    --tertiary-color: #11332c;
     --text-color: #26312E;
     --background-color: #F7F3EA;
     --font-title: 'Cormorant Garamond', serif;
@@ -72,7 +73,7 @@ main {
     transition: 0.2s ease;
 }
 
-/* Botões do menu */
+/* Botões */
 .one {
     background-color: var(--secondary-color);
     color: var(--text-color);
@@ -100,19 +101,6 @@ transform: translateX(-50%);
 width: 70%;
 }
 
-/* Botão principal da seção de introdução */
-.btn {
-    margin-top: 5px;
-    padding: 12px 22px;
-    background-color: var(--highlight-color);
-    color: var(--primary-color);
-}
-
-.btn:hover {
-    background-color: var(--primary-color);
-    color: var(--highlight-color);
-}
-
 /* Espaçamento padrão das seções informativas */
 .intro,
 .services,
@@ -123,11 +111,22 @@ width: 70%;
 
 /* apresentação do resort */
 .intro {
-  background-image: url('img/imagem_intro.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 400px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--tertiary-color);
+    color: var(--text-color);
+    padding: 0;
+    overflow: hidden;
+}
+
+.intro::after {
+    content: "";
+   flex: 1;
+   background-image: url('img/imagem_intro.png');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
 }
 .intro_text {
     max-width: 50%;
