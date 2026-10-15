@@ -76,11 +76,28 @@ main {
 .one {
     background-color: var(--secondary-color);
     color: var(--text-color);
+    position: relative;
 }
 
 .one:hover {
     background-color: var(--primary-color);
     color: var(--highlight-color);
+}
+
+.one::after {
+content: "";
+position: absolute;
+left: 50%;
+bottom: 4px;
+width: 0;
+height: 2px;
+background-color: var(--highlight-color);
+transition: width 0.3s ease;
+transform: translateX(-50%);
+}
+
+.one:hover::after {
+width: 70%;
 }
 
 /* Botão principal da seção de introdução */
